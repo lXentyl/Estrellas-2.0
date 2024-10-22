@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #001; /* Color de fondo oscuro */
+    overflow: hidden; /* Evita el scroll */
+}
+
+.night {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    position: absolute;
+    background: purple; /* Color morado elegante */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0.8;
+    box-shadow: 0 0 20px purple; /* Estela de brillo */
+}
+
+.star--1 {
+    width: 10px;
+    height: 10px;
+    top: 20%;
+    left: 10%;
+    animation: twinkle 1.5s infinite alternate, move 3s ease-in-out infinite alternate;
+}
+
+.star--2 {
+    width: 15px;
+    height: 15px;
+    top: 30%;
+    left: 30%;
+    animation: twinkle 2s infinite alternate, move 3.5s ease-in-out infinite alternate;
+}
+
+.star--3 {
+    width: 12px;
+    height: 12px;
+    top: 40%;
+    left: 50%;
+    animation: twinkle 1.8s infinite alternate, move 2.5s ease-in-out infinite alternate;
+}
+
+.star--4 {
+    width: 14px;
+    height: 14px;
+    top: 15%;
+    left: 70%;
+    animation: twinkle 2.5s infinite alternate, move 4s ease-in-out infinite alternate;
+}
+
+.star--5 {
+    width: 8px;
+    height: 8px;
+    top: 70%;
+    left: 20%;
+    animation: twinkle 1.2s infinite alternate, move 3s ease-in-out infinite alternate;
+}
+
+.star--6 {
+    width: 10px;
+    height: 10px;
+    top: 80%;
+    left: 40%;
+    animation: twinkle 1.7s infinite alternate, move 2s ease-in-out infinite alternate;
+}
+
+.star--7 {
+    width: 12px;
+    height: 12px;
+    top: 55%;
+    left: 60%;
+    animation: twinkle 2.0s infinite alternate, move 3.5s ease-in-out infinite alternate;
+}
+
+.star--8 {
+    width: 14px;
+    height: 14px;
+    top: 65%;
+    left: 80%;
+    animation: twinkle 1.3s infinite alternate, move 3s ease-in-out infinite alternate;
+}
+
+.star--9 {
+    width: 10px;
+    height: 10px;
+    top: 35%;
+    left: 25%;
+    animation: twinkle 2.1s infinite alternate, move 2.5s ease-in-out infinite alternate;
+}
+
+.star--10 {
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 90%;
+    animation: twinkle 1.6s infinite alternate, move 3s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 0 20px purple; /* Estela al inicio */
+    }
+    25% {
+        box-shadow: 0 0 30px purple; /* Aumenta el brillo de la estela */
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 0 15px purple; /* Disminuye la estela */
+    }
+    75% {
+        box-shadow: 0 0 30px purple; /* Aumenta el brillo de la estela nuevamente */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
